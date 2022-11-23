@@ -12,26 +12,34 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Ejemplo02 {
+public class Ejemplo031 {
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         
-        int limite;
+        int limite = 5;
         int contador = 1;
+        double suma = 0;
+        int valor_ingresado;
+        double promedio;
         
-        System.out.println("Ingrese el limite");
-        limite = entrada.nextInt();
-        
-        while (contador <= limite){
-            System.out.printf("Contador %d\n", contador);
+        while (contador <= limite) { 
+            System.out.println("Ingrese el valor a sumar");
+            valor_ingresado = entrada.nextInt();
+            suma = suma + valor_ingresado;
+            System.out.printf("Valor ingresado %d\n", valor_ingresado);
             contador = contador + 1;
         }
         
+        promedio = suma / limite; 
+
+        System.out.printf("La suma final es %.2f\n" , suma);
+        System.out.printf("El promedio final es %.2f\n" , promedio);
+
     }
 }

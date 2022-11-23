@@ -5,6 +5,7 @@
  */
 package ejemplociclowhile;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -19,6 +20,8 @@ public class Ejemplo03 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+        
         int limite = 5;
         int contador = 1;
         int suma = 0;
